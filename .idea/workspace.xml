@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b1cc0fa5-dcef-43f7-8caf-3bc2c51cd4cf" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Object" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.6.3" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="27dsp432IPUSSc5BIqDZOZTGpPp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/my-flink/src/main/scala/com/xh/flink" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.1724138" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeaProjects\my-project\my-flink\src\main\scala\com\xh\flink" />
+      <recent name="D:\IdeaProjects\my-project\my-flink\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.my" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TransTupleAggregationTest">
+    <configuration name="BoundedStreamWordCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xh.flink.java.stream.BoundedStreamWordCount" />
+      <module name="my-flink" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xh.flink.java.stream.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClickSource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xh.flink.java.source.ClickSource" />
+      <module name="my-flink" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xh.flink.java.source.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClickSourceWithCheckpoint" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xh.flink.java.source.ClickSourceWithCheckpoint" />
+      <module name="my-flink" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xh.flink.java.source.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClickSourceWithParallelism" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xh.flink.java.source.ClickSourceWithParallelism" />
+      <module name="my-flink" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xh.flink.java.source.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransTupleAggregationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xh.flink.java.trans.TransTupleAggregationTest" />
+      <module name="my-flink" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xh.flink.java.trans.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.BoundedStreamWordCount" />
+      <item itemvalue="Application.ClickSource" />
+      <item itemvalue="Application.ClickSourceWithParallelism" />
+      <item itemvalue="Application.ClickSourceWithCheckpoint" />
+      <item itemvalue="Application.TransTupleAggregationTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TransTupleAggregationTest" />
+        <item itemvalue="Application.ClickSourceWithCheckpoint" />
+        <item itemvalue="Application.ClickSourceWithParallelism" />
+        <item itemvalue="Application.ClickSource" />
+        <item itemvalue="Application.BoundedStreamWordCount" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b1cc0fa5-dcef-43f7-8caf-3bc2c51cd4cf" name="Changes" comment="" />
+      <created>1649661481673</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649661481673</updated>
+      <workItem from="1649661482788" duration="302000" />
+      <workItem from="1649661842908" duration="449000" />
+      <workItem from="1649662335468" duration="923000" />
+      <workItem from="1649663326793" duration="1824000" />
+      <workItem from="1649665185141" duration="21265000" />
+      <workItem from="1649896877499" duration="795000" />
+      <workItem from="1649985728585" duration="13348000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
