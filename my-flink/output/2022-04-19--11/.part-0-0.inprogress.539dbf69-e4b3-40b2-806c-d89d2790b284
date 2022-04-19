@@ -1,0 +1,9 @@
+Event{user='Mary', url='./home', timestamp=1000}
+Event{user='Bob', url='./cart', timestamp=2000}
+Event{user='Alice', url='./prod?id=100', timestamp=3000}
+Event{user='Alice', url='./prod?id=100', timestamp=3500}
+Event{user='Bob', url='./prod?id=2', timestamp=2500}
+Event{user='Alice', url='./prod?id=300', timestamp=3600}
+Event{user='Bob', url='./home', timestamp=3000}
+Event{user='Bob', url='./prod?id=1', timestamp=2300}
+Event{user='Bob', url='./prod?id=3', timestamp=3300}
