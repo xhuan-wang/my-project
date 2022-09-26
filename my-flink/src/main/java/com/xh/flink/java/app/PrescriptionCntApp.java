@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.api.common.functions.AggregateFunction;
 import org.apache.flink.api.common.functions.FilterFunction;
+import org.apache.flink.api.common.restartstrategy.RestartStrategies;
 import org.apache.flink.api.java.functions.KeySelector;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.api.java.tuple.Tuple3;
@@ -49,13 +50,33 @@ public class PrescriptionCntApp {
 
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
+        //每3000ms开启一次checkpoint
+        //env.enableCheckpointing(3000);
+        // 设置模式为精确一次 (这是默认值)
+        //env.getCheckpointConfig().setCheckpointingMode(CheckpointingMode.EXACTLY_ONCE);
+        // 确认 checkpoints 之间的时间会进行 500 ms
+        //env.getCheckpointConfig().setMinPauseBetweenCheckpoints(500);
+        // Checkpoint 必须在一分钟内完成，否则就会被抛弃
+        //env.getCheckpointConfig().setCheckpointTimeout(60000);
+        // 同一时间只允许一个 checkpoint 进行
+        //env.getCheckpointConfig().setMaxConcurrentCheckpoints(1);
+        // 开启在 job 中止后仍然保留的 externalized checkpoints
+        //env.getCheckpointConfig().enableExternalizedCheckpoints(CheckpointConfig.ExternalizedCheckpointCleanup.RETAIN_ON_CANCELLATION);
+
+        // 间隔10秒 重启3次
+        env.setRestartStrategy(RestartStrategies.fixedDelayRestart(3, org.apache.flink.api.common.time.Time.seconds(10)));
+
+        //5分钟内若失败了3次则认为该job失败，重试间隔为10s
+//        env.setRestartStrategy(RestartStrategies.failureRateRestart(3,Time.of(5,TimeUnit.MINUTES),Time.of(10,TimeUnit.SECONDS)));
+
+
         ApplicationPropertiesConfig propertiesConfig = new ApplicationPropertiesConfig();
 
         MySqlSource<String> mySqlSource = MySqlSource.<String>builder()
                 .hostname(propertiesConfig.getProperty("db.ip"))
                 .port(Integer.parseInt(propertiesConfig.getProperty("db.port")))
                 .databaseList(propertiesConfig.getProperty("db.databaseName"))
-                .tableList(propertiesConfig.getProperty("db.databaseName") + "." + propertiesConfig.getProperty("db.prescription"))
+                .tableList(propertiesConfig.getProperty("db.databaseName") + "." + "prescription_.*")
                 .username(propertiesConfig.getProperty("db.username"))
                 .password(propertiesConfig.getProperty("db.password"))
                 .deserializer(new JsonDebeziumDeserializationSchema()) // 将SourceRecord 转成 JSON 字符串，格式如下注释：
