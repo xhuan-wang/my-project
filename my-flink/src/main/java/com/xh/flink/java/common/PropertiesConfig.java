@@ -3,14 +3,14 @@ package com.xh.flink.java.common;
 import java.io.InputStream;
 import java.util.Properties;
 
-public class ApplicationPropertiesConfig {
-    private static final String configPath="/application.properties";
+public class PropertiesConfig {
+    private static final String configPath= "/application.properties";
     private Properties propertyFile=new Properties();
 
     /**
      *构造类时加载配置文件
      **/
-    public ApplicationPropertiesConfig(){
+    public PropertiesConfig(){
         try{
             //toURI()解决中文路径问题
 //            String path=this.getClass().getClassLoader().getResource(this.configPath).toURI().getPath();

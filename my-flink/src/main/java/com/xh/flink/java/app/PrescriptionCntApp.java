@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.ververica.cdc.connectors.mysql.source.MySqlSource;
 import com.ververica.cdc.debezium.JsonDebeziumDeserializationSchema;
-import com.xh.flink.java.common.ApplicationPropertiesConfig;
+import com.xh.flink.java.common.PropertiesConfig;
 import com.xh.flink.java.pojo.Prescription;
 import com.xh.flink.java.sink.MySQLJDBCSink;
 import lombok.extern.slf4j.Slf4j;
@@ -70,7 +70,7 @@ public class PrescriptionCntApp {
 //        env.setRestartStrategy(RestartStrategies.failureRateRestart(3,Time.of(5,TimeUnit.MINUTES),Time.of(10,TimeUnit.SECONDS)));
 
 
-        ApplicationPropertiesConfig propertiesConfig = new ApplicationPropertiesConfig();
+        PropertiesConfig propertiesConfig = new PropertiesConfig();
 
         MySqlSource<String> mySqlSource = MySqlSource.<String>builder()
                 .hostname(propertiesConfig.getProperty("db.ip"))

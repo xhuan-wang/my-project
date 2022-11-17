@@ -1,6 +1,6 @@
 package com.xh.flink.java.sink;
 
-import com.xh.flink.java.common.ApplicationPropertiesConfig;
+import com.xh.flink.java.common.PropertiesConfig;
 import org.apache.flink.connector.jdbc.JdbcConnectionOptions;
 import org.apache.flink.connector.jdbc.JdbcExecutionOptions;
 import org.apache.flink.connector.jdbc.JdbcSink;
@@ -31,7 +31,7 @@ public class MySQLJDBCSink<T> {
      * @param database             表所在的数据库
      */
     public MySQLJDBCSink(String sql, JdbcStatementBuilder<T> jdbcStatementBuilder, String database) {
-        ApplicationPropertiesConfig propertiesConfig = new ApplicationPropertiesConfig();
+        PropertiesConfig propertiesConfig = new PropertiesConfig();
         sink = JdbcSink.sink(
                 sql,
                 jdbcStatementBuilder,
@@ -56,7 +56,7 @@ public class MySQLJDBCSink<T> {
      */
     public MySQLJDBCSink(String sql, JdbcStatementBuilder<T> jdbcStatementBuilder, String database,
                          int batchIntervalMs, int batchSize, int maxRetries) {
-        ApplicationPropertiesConfig propertiesConfig = new ApplicationPropertiesConfig();
+        PropertiesConfig propertiesConfig = new PropertiesConfig();
         sink = JdbcSink.sink(
                 sql,
                 jdbcStatementBuilder,

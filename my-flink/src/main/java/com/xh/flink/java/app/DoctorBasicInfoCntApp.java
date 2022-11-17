@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.ververica.cdc.connectors.mysql.source.MySqlSource;
 import com.ververica.cdc.debezium.JsonDebeziumDeserializationSchema;
-import com.xh.flink.java.common.ApplicationPropertiesConfig;
+import com.xh.flink.java.common.PropertiesConfig;
 import com.xh.flink.java.pojo.DoctorBasicInfo;
 import com.xh.flink.java.sink.MySQLJDBCSink;
 import lombok.extern.slf4j.Slf4j;
@@ -48,7 +48,7 @@ public class DoctorBasicInfoCntApp {
     public static void main(String[] args) throws Exception {
         final StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
-        ApplicationPropertiesConfig propertiesConfig = new ApplicationPropertiesConfig();
+        PropertiesConfig propertiesConfig = new PropertiesConfig();
 
         MySqlSource<String> mySqlSource = MySqlSource.<String>builder()
                 .hostname(propertiesConfig.getProperty("db.ip"))
