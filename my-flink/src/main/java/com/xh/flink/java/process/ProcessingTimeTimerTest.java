@@ -63,7 +63,7 @@ public class ProcessingTimeTimerTest {
                         out.collect("定时器触发，触发时间：" + new Timestamp(timestamp));
                     }
                 })
-                /*.print()*/;
+                .print();
 
         env.execute();
     }

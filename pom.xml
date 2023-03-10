@@ -11,6 +11,7 @@
     <modules>
         <module>my-flink</module>
         <module>my-clickhouse</module>
+        <module>my-java</module>
     </modules>
 
     <properties>
